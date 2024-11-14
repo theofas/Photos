@@ -19,4 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/Album", [AlbumController::class, 'album']); 
+Route::get("/Accueil", [AccueilController::class, 'accueil']); 
