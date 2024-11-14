@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\AccueilController;
 
 
 /*
@@ -19,4 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/Accueil", [AccueilController::class, 'accueil']); 
+Route::get("/", [AccueilController::class, 'accueil']); 
