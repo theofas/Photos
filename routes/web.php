@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccueilController;
+use App\Http\Controllers\AlbumController;
 
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get("/", [AccueilController::class, 'accueil']); 
+Route::get("/albums", [AlbumController::class, 'albums'])->name("albums"); 
+Route::get("/tags/{tag}", [AlbumController::class, 'tags'])->name("tags"); 
