@@ -5,3 +5,8 @@
     <a href="">Login</a>
 
 </nav>
+
+@foreach ($album as $a)
+    <a href="{{route("photosalbum", $a->id)}}">{{$a -> titre}}</a>
+
+@endforeach

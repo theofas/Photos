@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 class AlbumController extends Controller
 {
     function albums(){
-        return view("albums");
+        $album = DB::select("select * from albums");
+       
+        return view("albums", ["album" => $album]);
     }
+
+    
 
     function tags($tag){
         $monTag = DB::select("select * From tags where nom=?", [$tag]);
@@ -24,7 +28,7 @@ class AlbumController extends Controller
 
     function photosalbum($id){
        
-        $photos = DB::select("select * from photo where album_id = ?", [$id]);
+        $photos = DB::select("select * from photos where album_id = ?", [$id]);
 
 
         return view("photos", ["phototags" => $photos]);
