@@ -19,8 +19,9 @@ class AlbumController extends Controller
         where tag_id = ?", [$idTag]);
 
 
-        return $photostags;
+        return view("photos", [$photostags]);
     }
+
 
 
 }
