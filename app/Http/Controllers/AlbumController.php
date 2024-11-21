@@ -19,7 +19,15 @@ class AlbumController extends Controller
         where tag_id = ?", [$idTag]);
 
 
-        return view("photos", [$photostags]);
+        return view("photos", ["phototags" => $photostags]);
+    }
+
+    function photosalbum($id){
+       
+        $photos = DB::select("select * from photo where album_id = ?", [$id]);
+
+
+        return view("photos", ["phototags" => $photos]);
     }
 
 

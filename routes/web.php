@@ -22,4 +22,5 @@ Route::get('/', function () {
 
 Route::get("/", [AccueilController::class, 'accueil'])->name("accueil"); 
 Route::get("/albums", [AlbumController::class, 'albums'])->name("albums"); 
+Route::get("/albums/{id}", [AlbumController::class, 'photosalbum']); 
 Route::get("/tags/{tag}", [AlbumController::class, 'tags'])->name("tags"); 

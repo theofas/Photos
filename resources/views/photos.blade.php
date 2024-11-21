@@ -5,3 +5,11 @@
     <a href="">Login</a>
 
 </nav>
+
+
+
+@foreach ($phototags as $tag)
+
+    <img height="300px" src="{{$tag -> url}}" alt="">
+
+@endforeach
