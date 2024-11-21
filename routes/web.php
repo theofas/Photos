@@ -20,6 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/", [AccueilController::class, 'accueil']); 
+Route::get("/", [AccueilController::class, 'accueil'])->name("accueil"); 
 Route::get("/albums", [AlbumController::class, 'albums'])->name("albums"); 
 Route::get("/tags/{tag}", [AlbumController::class, 'tags'])->name("tags"); 
