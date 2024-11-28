@@ -197,7 +197,7 @@ nav ::placeholder {
 }
 
 .album .contenualb{
-    border: solid 1px rgba(47, 222, 196, 0.5);
+    border: solid 1px rgba(47, 222, 196, 0.7);
     border-radius: 5rem;
     margin: 0px 150px 0px 150px;
     text-decoration: none;
