@@ -31,12 +31,16 @@ class AlbumController extends Controller
         if ($request->has('search')){
             $search = '%'. $request->input('search'). '%';
             $photos = DB::select("select * from photos where album_id = ? and titre like ?", [$id, $search]);
+            $search = $request->input('search');
         }
-        else
-          $photos = DB::select("select * from photos where album_id = ?", [$id]);
+        else{
+            $photos = DB::select("select * from photos where album_id = ?", [$id]);
+            $search = '';
+        }
+          
 
 
-        return view("photos", ["phototags" => $photos]);
+        return view("photos", ["phototags" => $photos, "search"=>$search]);
     }
 
 

@@ -4,9 +4,9 @@
 <nav>
     <a href="{{route('accueil')}}">Accueil</a>
     <a href="{{route('albums')}}">Album</a>
-    <form method="GET" action="#">
-    <input type="text" name="search" placeholder="rechercher">
-    <input type="submit">
+    <form class="search" method="GET" action="#">
+    <input class="search1" type="text" name="search" placeholder="rechercher" value="@if(isset($search)){{$search}}@endif">
+    <input class="search2" type="submit">
     </form>
    
     <a href="">Login</a>
