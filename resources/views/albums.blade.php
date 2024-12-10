@@ -4,7 +4,10 @@
 <nav>
     <a href="{{route('accueil')}}">Accueil</a>
     <a href="{{route('albums')}}">Album</a>
-    <input type="text" name="recherche" placeholder="rechercher">
+    <form method="GET" action="#">
+    <input type="text" name="search" placeholder="rechercher">
+    <input type="submit">
+    </form>
     <a href="">Login</a>
 </nav>
 

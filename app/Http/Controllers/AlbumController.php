@@ -26,9 +26,14 @@ class AlbumController extends Controller
         return view("photos", ["phototags" => $photostags]);
     }
 
-    function photosalbum($id){
+    function photosalbum(Request $request, $id){
        
-        $photos = DB::select("select * from photos where album_id = ?", [$id]);
+        if ($request->has('search')){
+            $search = '%'. $request->input('search'). '%';
+            $photos = DB::select("select * from photos where album_id = ? and titre like ?", [$id, $search]);
+        }
+        else
+          $photos = DB::select("select * from photos where album_id = ?", [$id]);
 
 
         return view("photos", ["phototags" => $photos]);
