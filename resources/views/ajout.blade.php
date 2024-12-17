@@ -12,14 +12,19 @@
 </nav>
 
 <div class="header">
-    <h1>Mon album photo VACANCES</h1>
+    <h1>Ajouter des photos</h1>
     <h3>" Collecter facilement et rapidement vos plus beaux souvenirs de vacances chez nous, et transformez-les en moments inoubliables à partager "</h3>
 </div>
 
 
-@foreach ($phototags as $tag)
 
 
-    <img height="300px" src="{{$tag -> url}}" alt="">
-
-@endforeach
+<form action="{{route('storephotos')}}" method="post" enctype="multipart/form-data">
+    @csrf
+    <input type="text" name="titre" value="titre">
+    
+    <label for="photo">Choisir des photos :</label>
+        <input type="file" name="url" id="photo" accept="image/*" multiple required>
+    <input type="text" name="albumid" value="0">
+    <input type="submit" value="ajouter photos">
+</form>

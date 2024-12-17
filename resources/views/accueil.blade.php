@@ -9,7 +9,7 @@
     <input class="search1" type="text" name="search" placeholder="rechercher">
     <input class="search2" type="submit">
     </form>
-    <a href="">Login</a>
+    <a href="{{route('ajout')}}">Ajouter</a>
 </nav>
 
 <div class="header">
