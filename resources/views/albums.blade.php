@@ -6,7 +6,7 @@
     <a href="{{route('albums')}}">Album</a>
 
     <form class="search" method="GET" action="#">
-        <input class="search1" type="text" name="search" placeholder="rechercher" >
+        <input class="search1" type="text" name="search" placeholder="rechercher">
         <input class="search2" type="submit">
     </form>
     <a href="">Login</a>
