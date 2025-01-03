@@ -19,6 +19,6 @@ class AjoutController extends Controller
        $album = $request -> input('albumid');
        $v = env('APP_URL') . 'storage/' . $request->file('url')->store();
        DB::insert('insert into photos (titre, url, album_id) values (?, ?, ?)', [$titre, $v, $album]);
-        return redirect('')
+       return redirect('');
     }
 }

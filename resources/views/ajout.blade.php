@@ -18,13 +18,16 @@
 
 
 
-
-<form action="{{route('storephotos')}}" method="post" enctype="multipart/form-data">
-    @csrf
-    <input type="text" name="titre" value="titre">
-    
-    <label for="photo">Choisir des photos :</label>
-        <input type="file" name="url" id="photo" accept="image/*" multiple required>
-    <input type="text" name="albumid" value="0">
-    <input type="submit" value="ajouter photos">
-</form>
+<div class="ajouter">
+  
+    <form action="{{route('storephotos')}}" method="post" enctype="multipart/form-data" class="ajout">
+    <h1 class="h1ajout" >Ajouter une photo dans un album</h1>
+        @csrf
+        <input type="text" name="titre" value="titre" class="titre_ajout">
+        
+        <label for="photo" class="ajout_photo">Choisir des photos :</label>
+            <input class="choix_photo" type="file" name="url" id="photo" accept="image/*" multiple required>
+        <input type="text" class="num_album" name="albumid" value="0" placeholder="numéro de l'album">
+        <input type="submit" class="bouton_ajout" value="ajouter photos">
+    </form>
+</div>
