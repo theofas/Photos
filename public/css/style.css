@@ -218,24 +218,28 @@ nav ::placeholder {
 }
 
 .album .contenualb{
-    border: solid 1px rgba(47, 222, 196, 0.7);
+    border: solid 3px rgba(47, 222, 196, 0.7);
     border-radius: 5rem;
     margin: 0px 150px 0px 150px;
-    text-decoration: none;
-    color: black;
+    
     padding: 8rem;
-    font-size: 20px;
-    color: aliceblue;
-    font-size: 3.5rem;
-    font-family: berlin;
+    
     position: relative;
     z-index: 2; 
 }
+
+.album a{
+    color: rgba(47, 222, 196, 0.7);
+    font-size: 3.5rem;
+    text-decoration: none;
+}
+
 
 .album .contenualb:hover {
     background-image: linear-gradient(to top, rgba(47, 222, 196, 0.7), rgba(47, 222, 196, 0.5)); 
     background-size: cover;
     background-position: center;
+    color: white;
 }
 
 
